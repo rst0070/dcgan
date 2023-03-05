@@ -24,12 +24,10 @@ class Main:
         
     def start(self):
         
-        img_list = []
-        
         start_idx = 0
         for epoch in range(1, 10):
             
-            img_list = img_list + self.trainer.train()
+            img_list = self.trainer.train()
             start_idx = self.saveImgs(img_list, start_idx)
         
 if __name__ == "__main__":
